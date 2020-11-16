@@ -1,20 +1,20 @@
-@import-normalize;
+@import-normalize ;
 
 html {
-	font-size: 10px;
-	margin: 0;
-	padding: 0;
-	min-width: 32rem;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  min-width: 32rem;
 }
 
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #8a8c91;
-	background-color: #efeff4;
-	font-family: Gordita,Helvetica Neue,Helvetica,Arial,sans-serif;
-	margin: 0;
-	padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #8a8c91;
+  background-color: #efeff4;
+  font-family: Gordita, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -23,10 +23,10 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
+  margin: 0;
 }
 
 h2 {
-	font-size: calc(var(--fs-large-size) * 1.5);
-	text-transform: capitalize;
+  font-size: calc(var(--fs-large-size) * 1.5);
+  text-transform: capitalize;
 }
