@@ -231,8 +231,31 @@ h2 {
   }
 
 .Server-list__header {
-  color: #000;
+  color: #000
 }
+
+.Server-list__header::after,
+  .Server-list__header::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    right: -10px;
+    width: 0;
+  }
+
+.Server-list__header::before {
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
+    border-bottom: 0.3rem solid black;
+    top: 0.5rem;
+  }
+
+.Server-list__header::after {
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
+    border-top: 0.3rem solid black;
+    bottom: 0.5rem;
+  }
 
 .Login {
   max-width: 50rem;

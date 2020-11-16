@@ -22,7 +22,7 @@ function ServerListHeaders() {
         <span
           key={ index }
           onClick={ () => sortList(header.value) }
-          className="Server-list__header cp fw-600 fs-medium"
+          className="Server-list__header cp fw-600 fs-medium position-r"
         >{ header.name }</span>
       )
     })

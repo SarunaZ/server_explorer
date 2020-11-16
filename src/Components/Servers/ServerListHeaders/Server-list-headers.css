@@ -1,3 +1,26 @@
 .Server-list__header {
   color: #000;
+  
+  &::after,
+  &::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    right: -10px;
+    width: 0;
+  }
+
+  &::before {
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
+    border-bottom: 0.3rem solid black;
+    top: 0.5rem;
+  }
+  
+  &::after {
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
+    border-top: 0.3rem solid black;
+    bottom: 0.5rem;
+  }
 }
