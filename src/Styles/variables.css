@@ -1,0 +1,12 @@
+:root {
+  --small-size: 1rem;
+  --regular-size: 1.5rem;
+  --large-size: 2.5rem;
+  --fs-small-size: 1.2rem;
+  --fs-regular-size: 1.4rem;
+  --fs-medium-size: 1.8rem;
+  --fs-large-size: 2.4rem;
+  --fw-light: 100;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
