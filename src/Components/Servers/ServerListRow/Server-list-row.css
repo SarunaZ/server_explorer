@@ -1,5 +1,5 @@
 .Server-row {
-	&:not(:last-child) {
-		border-bottom: 1px solid #0000000f;
-	}
+  &:not(:last-child) {
+    border-bottom: 1px solid #0000000f;
+  }
 }

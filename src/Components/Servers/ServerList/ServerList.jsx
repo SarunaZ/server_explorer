@@ -5,7 +5,7 @@ import ServerListHeaders from "../ServerListHeaders/ServerListHeaders";
 function ServerList() {
   return (
     <>
-      <div className='Server-list m0a b-sizing-border p-2'>
+      <div className='Server-list m0a b-sizing-border p-2 box-shadow'>
         <ServerListHeaders/>
         <ServerListRow/>
       </div>
