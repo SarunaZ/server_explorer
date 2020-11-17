@@ -12,7 +12,7 @@ Technologies used for this project:
 Testing done with:
   * [Cypress](https://www.cypress.io/)
 
- ## Enviroment variables:
+ ## Environment variables:
  `.env.example` file which contains local project variables, should be renamed to `.env` and 
  configured with correct endpoints
  
@@ -20,6 +20,9 @@ Testing done with:
     REACT_APP_SERVERS_DATA_API_URL="'YOUR SERVER DATA API ENDPOINT'"
     
 ## Testing with Cypress
+  When testing with Cypress, it is important to have the project running on local `port 3000`, otherwise it will not 
+  pick up the project.
+  
   Before running the tests the file `cypress.env.json.example` should be renamed to `cypress.env.json`
   
         {
@@ -31,7 +34,7 @@ Testing done with:
   the variables must contain correct log in information and session token - it is necessary for testing
     
   To run the test UI simply run `npm run test`. An interface will appear giving the choice of which test
-   to run
+  to run.
 ## Live production:
 
 If this project need to be deployed to a live server `.htaccess` file must be adjusted for routes to work:
