@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { getServerDataAction, setServerData } from "../../../Store/Actions/ServersActions";
 
-function ServerListRow() {
+function ServerListRows() {
   const dispatch = useDispatch();
   const serverData = useSelector(state => state.serverData?.data);
 
@@ -21,18 +21,18 @@ function ServerListRow() {
 
   const renderRow = serverData?.map((row, index) => {
       return (
-        <div className="Server-row flex space-between my py fs-regular fw-600" key={index}>
+        <li className="Server-row flex space-between my py fs-regular fw-600" key={index}>
           <span>{ row.name }</span>
           <span>{ row.distance }</span>
-        </div>
+        </li>
       )
     })
 
   return (
-    <>
+    <ul>
       { renderRow }
-    </>
+    </ul>
   );
 }
 
-export default ServerListRow;
+export default ServerListRows;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
+import { PropTypes } from 'prop-types';
 
 export const ProtectedRoute = ({
   component: Component,
@@ -21,4 +22,10 @@ export const ProtectedRoute = ({
       }
     />
   );
+};
+
+ProtectedRoute.propTypes = {
+  component: PropTypes.func,
+  isLoggedIn: PropTypes.bool,
+  redirect: PropTypes.string
 };

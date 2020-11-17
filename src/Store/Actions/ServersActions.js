@@ -1,6 +1,22 @@
 import { getCookieData } from "../../Utilities/cookieParser";
 import { SERVER_DATA, SORT_SERVER_DATA } from "../Constants/serversConst";
 
+
+export const setSortData = (name, direction) => {
+  return {
+    type: SORT_SERVER_DATA,
+    name,
+    direction
+  }
+}
+
+export const setServerData = (res) => {
+  return {
+    type: SERVER_DATA,
+    res
+  }
+}
+
 export const getServerDataAction = () => {
   const token = getCookieData('sessionToken');
   const serverBaseUrl = process.env.REACT_APP_SERVERS_DATA_API_URL;
@@ -23,20 +39,5 @@ export const getServerDataAction = () => {
         }
       })
       .catch(error => alert(error))
-  }
-}
-
-export const sortDataAction = (name, direction) => {
-  return {
-    type: SORT_SERVER_DATA,
-    name,
-    direction
-  }
-}
-
-export const setServerData = (res) => {
-  return {
-    type: SERVER_DATA,
-    res
   }
 }

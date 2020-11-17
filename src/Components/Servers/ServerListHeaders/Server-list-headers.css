@@ -3,6 +3,8 @@
   
   &::after,
   &::before {
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
     content: '';
     height: 0;
     position: absolute;
@@ -11,15 +13,11 @@
   }
 
   &::before {
-    border-left: 0.3rem solid transparent;
-    border-right: 0.3rem solid transparent;
     border-bottom: 0.3rem solid black;
     top: 0.5rem;
   }
   
   &::after {
-    border-left: 0.3rem solid transparent;
-    border-right: 0.3rem solid transparent;
     border-top: 0.3rem solid black;
     bottom: 0.5rem;
   }

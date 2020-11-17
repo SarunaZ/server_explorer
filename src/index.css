@@ -26,6 +26,12 @@ h6 {
   margin: 0;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
 h2 {
   font-size: calc(var(--fs-large-size)*1.5);
   text-transform: capitalize;
@@ -236,6 +242,8 @@ h2 {
 
 .Server-list__header::after,
   .Server-list__header::before {
+    border-left: 0.3rem solid transparent;
+    border-right: 0.3rem solid transparent;
     content: '';
     height: 0;
     position: absolute;
@@ -244,15 +252,11 @@ h2 {
   }
 
 .Server-list__header::before {
-    border-left: 0.3rem solid transparent;
-    border-right: 0.3rem solid transparent;
     border-bottom: 0.3rem solid black;
     top: 0.5rem;
   }
 
 .Server-list__header::after {
-    border-left: 0.3rem solid transparent;
-    border-right: 0.3rem solid transparent;
     border-top: 0.3rem solid black;
     bottom: 0.5rem;
   }

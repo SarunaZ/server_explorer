@@ -2,6 +2,19 @@ import { LOG_IN_DATA, LOG_OUT } from "../Constants/publicConst";
 
 const tokenBaseUrl = process.env.REACT_APP_TOKENS_API_URL;
 
+export const logoutAction = () => {
+  return {
+    type: LOG_OUT
+  }
+}
+
+export const setLogInData = (res) => {
+  return {
+    type: LOG_IN_DATA,
+    res
+  }
+}
+
 export const loginAction = (loginFormData = null) => {
   let requestParameters = {
     method: 'POST',
@@ -16,19 +29,11 @@ export const loginAction = (loginFormData = null) => {
       .then(res => res.json())
       .then(res => {
         if (!res.message) {
-          dispatch({
-            type: LOG_IN_DATA,
-            res
-          })
+          dispatch(setLogInData(res))
         } else {
           throw new Error(res.message);
         }
       })
       .catch(error => alert(error));
-  }
-}
-export const logoutAction = () => {
-  return {
-    type: LOG_OUT
   }
 }

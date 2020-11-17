@@ -1,20 +1,20 @@
-import React, { useRef } from 'react';
-import {useDispatch} from "react-redux";
-import {sortDataAction} from "../../../Store/Actions/ServersActions";
+import React, { useRef, useState } from 'react';
+import  {useDispatch } from "react-redux";
+import { setSortData } from "../../../Store/Actions/ServersActions";
+import { headersMap, SERVERS_SORTING_ASC, SERVERS_SORTING_DESC } from "../serverConstants";
 
 function ServerListHeaders() {
   const dispatch = useDispatch();
-  let directions = useRef(false);
-
-  const headersMap = [
-    { name: 'Name', value: 'name' },
-    { name: 'Distance', value: 'distance' },
-  ]
+  let headerToggle = useRef(false);
+  let [sortDirection, setSortDirection] = useState('');
 
   const sortList = (header) => {
-    directions.current = !directions.current;
-    let direction = directions.current ? 'asc' : 'desc';
-    dispatch(sortDataAction(header, direction));
+    headerToggle.current = !headerToggle.current;
+
+    setSortDirection(headerToggle.current
+      ? SERVERS_SORTING_ASC
+      : SERVERS_SORTING_DESC);
+    dispatch(setSortData(header, sortDirection));
   }
 
   const renderHeaders = headersMap?.map((header, index) => {
@@ -22,6 +22,7 @@ function ServerListHeaders() {
         <span
           key={ index }
           onClick={ () => sortList(header.value) }
+          data-sort={ sortDirection }
           className="Server-list__header cp fw-600 fs-medium position-r"
         >{ header.name }</span>
       )
@@ -29,7 +30,7 @@ function ServerListHeaders() {
 
   return (
     <>
-      <div className="Server-row__container flex space-between">
+      <div className="flex space-between">
         { renderHeaders }
       </div>
     </>

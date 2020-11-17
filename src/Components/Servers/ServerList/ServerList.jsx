@@ -1,5 +1,5 @@
 import React from 'react';
-import ServerListRow from "../ServerListRow/ServerRow";
+import ServerListRows from "../ServerListRow/ServerRow";
 import ServerListHeaders from "../ServerListHeaders/ServerListHeaders";
 
 function ServerList() {
@@ -7,7 +7,7 @@ function ServerList() {
     <>
       <div className='Server-list m0a b-sizing-border p-2 box-shadow'>
         <ServerListHeaders/>
-        <ServerListRow/>
+        <ServerListRows/>
       </div>
     </>
   );
